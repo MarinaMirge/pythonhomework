@@ -47,9 +47,16 @@ flight_list = [Flight ('Berlin', '1212', 'Boeing-747', '09:00', 'Monday'),
                Flight ('London', '1010', 'Boeing-747', '12:30', 'Monday')
 
 
-destination = int(input('Введите пункт назначения: \n') # с этого момента ошибка????
-
+destination = int(input('Введите пункт назначения: \n') # с этого момента почему-то ошибка
+                  
 while i < len(flight_list):
     if flight_list[i].get_destination() == destination:
         flight_list_for_destination(i)
+        i +=1
+
+day = input('Введите день недели: \n')
+                  
+while i < len(flight_list):
+    if flight_list[i].get_day() == day:
+        flight_list_for_day(i)
         i +=1
