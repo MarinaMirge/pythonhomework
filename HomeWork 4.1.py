@@ -1,4 +1,4 @@
-class Airline:
+class flight:
     __destination= ' '
     __flight_number= ' '
     __airplane= ' '
@@ -25,7 +25,7 @@ class Airline:
     def get_day(self):
         return self.__day
 
-    def flight_list_for_destination(i):
+def flight_list_for_destination(i):
         print ('destination: ' + flight_list[i].get_destination())
         print ('flight_number: ' + flight_list[i].get_flight_number())
         print ('airplane: ' + flight_list[i].get_airplane())
@@ -34,28 +34,28 @@ class Airline:
         print ('----------------')
 
 i=0
-flight_list = [Flight ('Berlin', '1212', 'Boeing-747', '09:00', 'Monday'),
-               Flight ('Minsk', '1313', 'Boeing-747', '09:30', 'Monday'),
-               Flight ('Moskau', '1414', 'Boeing-777', '09:00', 'Sunday'),
-               Flight ('Kiev', '1515', 'Boeing-777', '09:30', 'Sunday'),
-               Flight ('Francfurt', '2121', 'Airbus A310', '10:00', 'Wednesday'),
-               Flight ('Berlin', '1616', 'Airbus A310' '10:00', 'Wednesday'),
-               Flight ('St.Peterburg', '1717', 'Boeing-747', '10:30', 'Friday'),
-               Flight ('Kiev', '1818', 'Boeing-747', '10:15', 'Friday'),
-               Flight ('London', '1919', 'Airbus A320', '10:15', 'Friday'),
-               Flight ('Berlin', '1111', 'Airbus A310', '09:00', 'Thursday'),
-               Flight ('London', '1010', 'Boeing-747', '12:30', 'Monday')
+flight_list = [flight('Berlin', '1212', 'Boeing-747', '09:00', 'Monday'),
+               flight('Minsk', '1313', 'Boeing-747', '09:30', 'Monday'),
+               flight('Moskau', '1414', 'Boeing-777', '09:00', 'Sunday'),
+               flight('Kiev', '1515', 'Boeing-777', '09:30', 'Sunday'),
+               flight('Francfurt', '2121', 'Airbus A310', '10:00', 'Wednesday'),
+               flight('Berlin', '1616', 'Airbus A310', '10:00', 'Wednesday'),
+               flight('St.Peterburg', '1717', 'Boeing-747', '10:30', 'Friday'),
+               flight('Kiev', '1818', 'Boeing-747', '10:15', 'Friday'),
+               flight('London', '1919', 'Airbus A320', '10:15', 'Friday'),
+               flight('Berlin', '1111', 'Airbus A310', '09:00', 'Thursday'),
+               flight('London', '1010', 'Boeing-747', '12:30', 'Monday')]
 
+destination = ' '
+day = ' '
 
-destination = int(input('Введите пункт назначения: \n') # с этого момента почему-то ошибка
-                  
+destination = input('Введите пункт назначения: \n') # с этого момента почему-то ошибка????
 while i < len(flight_list):
     if flight_list[i].get_destination() == destination:
         flight_list_for_destination(i)
         i +=1
 
 day = input('Введите день недели: \n')
-                  
 while i < len(flight_list):
     if flight_list[i].get_day() == day:
         flight_list_for_day(i)
