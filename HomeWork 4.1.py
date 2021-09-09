@@ -1,9 +1,9 @@
 class flight:
-    __destination= ' '
-    __flight_number= ' '
-    __airplane= ' '
-    __departure_time= ' '
-    __day= ' '
+    __destination = ' '
+    __flight_number = ' '
+    __airplane = ' '
+    __departure_time = ' '
+    __day = ' '
 
     def __init__(self, destination0, flight_number0, airplane0, departure_time0, day0):
         self.__destination = destination0
@@ -24,7 +24,7 @@ class flight:
         return self.__departure_time
     def get_day(self):
         return self.__day
-i=0
+i = 0
 def flight_list_for_destination(i):
         print ('destination: ' + flight_list[i].get_destination())
         print ('flight_number: ' + flight_list[i].get_flight_number())
@@ -61,10 +61,10 @@ destination = input('Введите пункт назначения: \n') # с �
 while i < len(flight_list):
     if flight_list[i].get_destination() == destination:
         flight_list_for_destination(i)
-        i += 1
-
+    i += 1
+i = 0
 day = input('Введите день недели: \n')
 while i < len(flight_list):
     if flight_list[i].get_day() == day:
         flight_list_for_day(i)
-        i += 1
+    i += 1
